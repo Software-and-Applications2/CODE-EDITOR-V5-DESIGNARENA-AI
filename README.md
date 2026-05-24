@@ -17,7 +17,7 @@
 </p>
 
 
-<h1 align="center" style="color: #FF5F1F; border-bottom: none;">⚡ CODE-EDITOR-V5-DESIGNARENA-AI ⚡</h1>
+<h1 responsive align="center" style="color: #FF5F1F; border-bottom: none;">⚡ CODE-EDITOR-V5-DESIGNARENA-AI ⚡</h1>
 
 ---
 
