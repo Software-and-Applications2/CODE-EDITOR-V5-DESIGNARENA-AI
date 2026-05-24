@@ -2,9 +2,7 @@
 <img width="2062" height="763" alt="App Branding Banner" src="https://github.com/user-attachments/assets/9f1b62f1-b313-4d8a-9029-571e4654980a" />
 </p>
 
-<p align="center">
-  <img src="https://capsule-render.vercel.sh/content?type=waving&color=121212&height=280&section=header&text=DESIGNARENA%20AI&fontSize=55&fontColor=FF5F1F&animation=twinkling" width="100%" alt="DesignArena AI Header Banner" />
-</p>
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/RELEASE-v5.0.0--beta-FF5F1F?style=for-the-badge&logo=github" alt="Release Version" />
