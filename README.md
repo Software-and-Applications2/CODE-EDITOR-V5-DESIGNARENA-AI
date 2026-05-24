@@ -1,6 +1,6 @@
-<img width="2062" height="763" alt="App Branding Banner" src="https://github.com/user-attachments/assets/10000ab3-a05f-449e-8bc7-0e0aa8d01f71" />
-
----
+<p align="center">
+<img width="2062" height="763" alt="App Branding Banner" src="https://github.com/user-attachments/assets/9f1b62f1-b313-4d8a-9029-571e4654980a" />
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/github/v/release/Software-and-Applications2/CODE-EDITOR-V5-DESIGNARENA-AI?color=FF5F1F&style=for-the-badge" alt="Release Version" />
@@ -8,8 +8,6 @@
   <img src="https://img.shields.io/github/license/Software-and-Applications2/CODE-EDITOR-V5-DESIGNARENA-AI?color=FF5F1F&style=for-the-badge" alt="License" />
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript Badge" />
 </p>
-
----
 
 <h1 align="center" style="color: #FF5F1F; border-bottom: none;">⚡ CODE-EDITOR-V5-DESIGNARENA-AI ⚡</h1>
 
@@ -111,19 +109,100 @@ DesignArena AI (v5) is a cutting-edge developer workspace engineered for instant
 ---
 
 ## 💻 Technical Setup Guide
-## Installation Sequence
-  1. Clone the project directly from your repository
 
-          git clone [https://github.com/Software-and-Applications2/CODE-EDITOR-V5-DESIGNARENA-AI.git](https://github.com/Software-and Applications2/CODE-EDITOR-V5-DESIGNARENA-AI.git) cd CODE-EDITOR-V5-DESIGNARENA-AI
-  
-      
-  2. Provision environment variables securely
+### System Prerequisites
+```bash
+node --version # Requires Node.js v18.0.0 or higher
+npm --version  # Requires npm v9.0.0 or higher
 
-          touch .env
+```
 
-  Add your keys securely
+### Installation Sequence
 
-        VITE_AI_COMPILER_ENDPOINT="[https://api.yourprovider.com/v1](https://api.yourprovider.com/v1)" VITE_AI_ACCESS_KEY="your_secure_high_voltage_token_here"
+1. Clone the project directly from your repository:
+```bash
+git clone [https://github.com/Software-and-Applications2/CODE-EDITOR-V5-DESIGNARENA-AI.git](https://github.com/Software-and-Applications2/CODE-EDITOR-V5-DESIGNARENA-AI.git)
+cd CODE-EDITOR-V5-DESIGNARENA-AI
 
-  
+```
 
+
+2. Provision environment variables securely:
+```bash
+touch .env
+
+```
+
+
+Add your keys securely:
+```env
+VITE_AI_COMPILER_ENDPOINT="[https://api.yourprovider.com/v1](https://api.yourprovider.com/v1)"
+VITE_AI_ACCESS_KEY="your_secure_high_voltage_token_here"
+
+```
+
+
+3. Synchronize development modules and run:
+```bash
+npm install
+npm run dev
+
+```
+
+
+
+---
+
+## 🗺 Interactive Application Workflow
+
+```
+[User Text Canvas Input] ──► [Auto-Language Detection Engine]
+                                       │
+                                       ▼
+ [AI System Verification] ◄─── [Interactive Code Scan Laser Triggered]
+         │
+         ├───► Critical Fixes  ──► [High-Voltage Neon Orange Badge Glow]
+         └───► Optimizations   ──► [Matte Amber Structural Framing]
+                                       │
+                                       ▼
+  [One-Click 'Fix All'] ───────► [Framer Motion Structural Layout Change]
+                                       │
+                                       ▼
+                          [Updated Production-Ready Code Canvas]
+
+```
+
+---
+
+## 🎨 Enterprise Styling Framework Details
+
+<p>
+All modular assets are governed via strict CSS Custom Variables bound inside the application root layers. Global interaction elements utilize these properties dynamically:
+</p>
+
+```css
+:root {
+  --charcoal: #121212;
+  --neon-orange: #FF5F1F;
+  --orange-glow: 0 0 15px rgba(255, 95, 31, 0.6);
+}
+
+```
+
+---
+
+## 👥 Production Governance & Contribution
+
+<p>
+For engineering guidelines regarding branch routing, optimization pipelines, or custom theme implementations, review the core codebase components inside the <code>src/</code> layout tree.
+</p>
+
+<hr style="border: 0.5px solid rgba(255, 95, 31, 0.2);" />
+
+<p align="center">
+<sub>Managed under institutional development parameters by <strong>Arcada Labs</strong> for <strong>DesignArena AI</strong>. All rights reserved.</sub>
+</p>
+
+```
+
+```
