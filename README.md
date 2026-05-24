@@ -111,9 +111,19 @@ DesignArena AI (v5) is a cutting-edge developer workspace engineered for instant
 ---
 
 ## 💻 Technical Setup Guide
+## Installation Sequence
+  1. Clone the project directly from your repository
 
-### System Prerequisites
+          git clone [https://github.com/Software-and-Applications2/CODE-EDITOR-V5-DESIGNARENA-AI.git](https://github.com/Software-and Applications2/CODE-EDITOR-V5-DESIGNARENA-AI.git) cd CODE-EDITOR-V5-DESIGNARENA-AI
+  
+      
+  2. Provision environment variables securely
 
-```bash
-node --version # Requires Node.js v18.0.0 or higher
-npm --version  # Requires npm v9.0.0 or higher
+          touch .env
+
+  Add your keys securely
+
+        VITE_AI_COMPILER_ENDPOINT="[https://api.yourprovider.com/v1](https://api.yourprovider.com/v1)" VITE_AI_ACCESS_KEY="your_secure_high_voltage_token_here"
+
+  
+
