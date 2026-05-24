@@ -3,18 +3,30 @@
 </p>
 
 
+---
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/RELEASE-v5.0.0--beta-FF5F1F?style=for-the-badge&logo=github" alt="Release Version" />
+
+---
   
   <img src="https://img.shields.io/badge/STARS-PRODUCTIONS-FF5F1F?style=for-the-badge&logo=github" alt="Stars" />
+
+---
   
   <img src="https://img.shields.io/badge/LICENSE-APACHE--2.0-FF5F1F?style=for-the-badge" alt="License" />
+
+---
   
   <img src="https://img.shields.io/badge/TYPESCRIPT-READY-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript Badge" />
 </p>
 
+---
+
 <h1 align="center" style="color: #FF5F1F; border-bottom: none;">⚡ CODE-EDITOR-V5-DESIGNARENA-AI ⚡</h1>
+
+---
 
 <p align="center" style="font-size: 1.2rem; color: #888888;">
   A production-ready, ultra-performance multi-language code editor driven by deep AI diagnosis, featuring an elite <strong>High-Voltage Dark Mode</strong> aesthetic.
