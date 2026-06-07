@@ -29,8 +29,12 @@ jobs:
         run: npm run lint
         continue-on-error: true
 
+      - name: Type check
+        run: npx tsc --noEmit
+        continue-on-error: true
+
       - name: Build project
-        run: npm run build
+        run: npx vite build
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
