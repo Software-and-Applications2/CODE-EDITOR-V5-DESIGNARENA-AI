@@ -284,6 +284,7 @@ const App: React.FC = () => {
     { value: 'python', label: 'Python' },
     { value: 'cpp', label: 'C++' },
     { value: 'html', label: 'HTML' },
+    { value: 'hindi', label: 'हिन्दी (Hindi)' },
   ];
 
   return (
@@ -305,7 +306,7 @@ const App: React.FC = () => {
 
         <div className="flex items-center gap-4">
           {!isLoggedIn ? (
-            <button onClick={() => setShowLoginModal(true)} className="flex items-center gap-2 px-5 py-1.5 rounded bg-[#FF5F00] hover:bg-[#FF5F00]/90 text-black font-semibold transition-all active:scale-[0.985]">
+            <button onClick={() => setShowLoginModal(true)} className="flex items-center gap-2 px-5 py-1.5 rounded bg-[#FF5F00] hover:bg-[#FF5F00]/90 text-black font-semibold transition-all activ[...]
               <User className="w-4 h-4" /> LOGIN TO SAVE
             </button>
           ) : (
@@ -320,13 +321,13 @@ const App: React.FC = () => {
         {/* Neon Sidebar */}
         <div className="w-64 border-r border-[#FF5F00]/20 bg-black/50 flex flex-col">
           <div className="p-5">
-            <div onClick={() => setCurrentView('editor')} className={`flex items-center gap-3 px-4 py-3 rounded-xl cursor-pointer mb-1 transition-all ${currentView === 'editor' ? 'bg-[#FF5F00] text-black font-bold' : 'hover:bg-white/5 text-[#FF5F00]'}`}>
+            <div onClick={() => setCurrentView('editor')} className={`flex items-center gap-3 px-4 py-3 rounded-xl cursor-pointer mb-1 transition-all ${currentView === 'editor' ? 'bg-[#FF5F00] te[...]
               <Play className="w-5 h-5" /> NEW ANALYSIS
             </div>
-            <div onClick={() => setCurrentView('history')} className={`flex items-center gap-3 px-4 py-3 rounded-xl cursor-pointer mb-1 transition-all ${currentView === 'history' ? 'bg-[#FF5F00] text-black font-bold' : 'hover:bg-white/5 text-[#FF5F00]'}`}>
+            <div onClick={() => setCurrentView('history')} className={`flex items-center gap-3 px-4 py-3 rounded-xl cursor-pointer mb-1 transition-all ${currentView === 'history' ? 'bg-[#FF5F00] [...]
               <History className="w-5 h-5" /> SESSION HISTORY
             </div>
-            <div onClick={() => setCurrentView('settings')} className={`flex items-center gap-3 px-4 py-3 rounded-xl cursor-pointer transition-all ${currentView === 'settings' ? 'bg-[#FF5F00] text-black font-bold' : 'hover:bg-white/5 text-[#FF5F00]'}`}>
+            <div onClick={() => setCurrentView('settings')} className={`flex items-center gap-3 px-4 py-3 rounded-xl cursor-pointer transition-all ${currentView === 'settings' ? 'bg-[#FF5F00] tex[...]
               <Settings className="w-5 h-5" /> SETTINGS
             </div>
           </div>
@@ -348,7 +349,7 @@ const App: React.FC = () => {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <select value={language} onChange={(e) => setLanguage(e.target.value)} className="bg-black border border-[#FF5F00]/60 px-4 py-2 text-sm rounded focus:outline-none focus:border-[#FF5F00]">
+                  <select value={language} onChange={(e) => setLanguage(e.target.value)} className="bg-black border border-[#FF5F00]/60 px-4 py-2 text-sm rounded focus:outline-none focus:border-[[...]
                     {languages.map(l => <option key={l.value} value={l.value}>{l.label}</option>)}
                   </select>
                   <div className="text-xs px-3 py-1.5 rounded bg-black border border-[#FF5F00]/40 text-[#FF5F00]">DETECTED: {detectedLanguage.toUpperCase()}</div>
@@ -357,7 +358,7 @@ const App: React.FC = () => {
 
               {/* Code Editor */}
               <div className="flex-1 p-8 relative">
-                <div className="relative h-full rounded-2xl border border-[#FF5F00]/30 bg-[#0a0a0a] overflow-hidden shadow-2xl" style={{ boxShadow: '0 0 0 1px #FF5F00, 0 25px 60px -15px rgba(0,0,0,0.6)' }}>
+                <div className="relative h-full rounded-2xl border border-[#FF5F00]/30 bg-[#0a0a0a] overflow-hidden shadow-2xl" style={{ boxShadow: '0 0 0 1px #FF5F00, 0 25px 60px -15px rgba(0,0,[...]
                   {/* Scanning Laser */}
                   <AnimatePresence>
                     {isScanning && (
@@ -384,7 +385,7 @@ const App: React.FC = () => {
                   <motion.button 
                     whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.985 }}
                     onClick={analyzeCode} disabled={isAnalyzing}
-                    className="flex items-center gap-3 px-8 py-3.5 rounded-xl bg-black border-2 border-[#FF5F00] text-[#FF5F00] font-semibold disabled:opacity-60 active:bg-[#FF5F00] active:text-black transition-all"
+                    className="flex items-center gap-3 px-8 py-3.5 rounded-xl bg-black border-2 border-[#FF5F00] text-[#FF5F00] font-semibold disabled:opacity-60 active:bg-[#FF5F00] active:text-b[...]
                   >
                     <Bug className="w-5 h-5" /> {isAnalyzing ? 'ANALYZING...' : 'RUN AI ANALYSIS'}
                   </motion.button>
@@ -394,7 +395,7 @@ const App: React.FC = () => {
                       ref={fixAllBtnRef}
                       whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.985 }}
                       onClick={applyAllFixes}
-                      className="flex items-center gap-3 px-9 py-3.5 rounded-xl bg-[#FF5F00] hover:bg-[#FF5F00]/90 text-black font-extrabold shadow-[0_0_25px_rgba(255,95,0,0.5)] active:scale-[0.985] transition-all"
+                      className="flex items-center gap-3 px-9 py-3.5 rounded-xl bg-[#FF5F00] hover:bg-[#FF5F00]/90 text-black font-extrabold shadow-[0_0_25px_rgba(255,95,0,0.5)] active:scale-[0.9[...]
                     >
                       <Zap className="w-5 h-5" /> FIX ALL ({issues.length})
                     </motion.button>
@@ -413,7 +414,7 @@ const App: React.FC = () => {
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {sessions.map((session, idx) => (
-                    <div key={idx} onClick={() => loadSession(session)} className="p-5 border border-[#FF5F00]/20 hover:border-[#FF5F00] rounded-2xl cursor-pointer group bg-black/40 transition-all">
+                    <div key={idx} onClick={() => loadSession(session)} className="p-5 border border-[#FF5F00]/20 hover:border-[#FF5F00] rounded-2xl cursor-pointer group bg-black/40 transition-al[...]
                       <div className="flex justify-between mb-4">
                         <div className="font-mono text-sm text-[#FF5F00]">{new Date(session.timestamp).toLocaleDateString()}</div>
                         <div className="uppercase text-xs tracking-widest px-3 py-px bg-[#FF5F00]/10 text-[#FF5F00] rounded">{session.language}</div>
@@ -435,6 +436,7 @@ const App: React.FC = () => {
                 <div className="border border-[#FF5F00]/20 rounded p-6">Theme: Charcoal Black + Neon Orange (locked)</div>
                 <div className="border border-[#FF5F00]/20 rounded p-6">Auto Language Detection: ENABLED</div>
                 <div className="border border-[#FF5F00]/20 rounded p-6">Session Storage: LOCAL BROWSER STORAGE</div>
+                <div className="border border-[#FF5F00]/20 rounded p-6">Supported Languages: JavaScript, Python, C++, HTML, CSS, हिन्दी</div>
               </div>
             </div>
           )}
@@ -445,7 +447,7 @@ const App: React.FC = () => {
       <AnimatePresence>
         {showDiff && (
           <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-[70] p-6">
-            <motion.div initial={{ opacity: 0, scale: 0.96, y: 30 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.985, y: 15 }} transition={{ ease: [0.21, 0.92, 0.3, 1] }} className="w-full max-w-6xl bg-[#121212] border border-[#FF5F00] rounded-3xl overflow-hidden">
+            <motion.div initial={{ opacity: 0, scale: 0.96, y: 30 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.985, y: 15 }} transition={{ ease: [0.21, 0.92, 0.3, 1] }[...]
               <div className="px-8 py-5 border-b border-[#FF5F00]/30 flex justify-between items-center">
                 <div className="font-bold text-2xl flex items-center gap-3"><AlertTriangle className="text-[#FF5F00]" /> AI ANALYSIS COMPLETE — DIFF PREVIEW</div>
                 <button onClick={() => setShowDiff(false)}><X /></button>
@@ -477,7 +479,7 @@ const App: React.FC = () => {
       <AnimatePresence>
         {showReport && (
           <div className="fixed inset-0 bg-black/80 z-[80] flex justify-end" onClick={() => setShowReport(false)}>
-            <motion.div initial={{ x: 80 }} animate={{ x: 0 }} exit={{ x: 80 }} onClick={e => e.stopPropagation()} className="w-full max-w-lg bg-[#121212] h-full border-l border-[#FF5F00] overflow-auto">
+            <motion.div initial={{ x: 80 }} animate={{ x: 0 }} exit={{ x: 80 }} onClick={e => e.stopPropagation()} className="w-full max-w-lg bg-[#121212] h-full border-l border-[#FF5F00] overflo[...]
               <div className="sticky top-0 bg-[#121212] p-8 border-b border-[#FF5F00]/40 flex justify-between">
                 <div><div className="font-bold text-xl">DETAILED FIX REPORT</div><div className="text-[#FF5F00] text-sm">ALL FIXES APPLIED SUCCESSFULLY</div></div>
                 <button onClick={() => setShowReport(false)}><X /></button>
@@ -488,7 +490,7 @@ const App: React.FC = () => {
                   <div key={index} className="border-l-4 border-[#FF5F00] pl-6">
                     <div className="flex justify-between items-center mb-1">
                       <div className="font-bold text-lg">{issue.type}</div>
-                      <div className={`px-3 py-px text-xs font-bold rounded ${issue.severity === 'Critical' || issue.severity === 'High' ? 'bg-[#FF5F00] text-black' : 'bg-white/10'}`}>{issue.severity}</div>
+                      <div className={`px-3 py-px text-xs font-bold rounded ${issue.severity === 'Critical' || issue.severity === 'High' ? 'bg-[#FF5F00] text-black' : 'bg-white/10'}`}>{issue.seve[...]
                     </div>
                     <div className="text-[#FF5F00] mb-3">{issue.description}</div>
                     <div className="text-sm opacity-75 leading-snug mb-4">{issue.explanation}</div>
@@ -498,8 +500,8 @@ const App: React.FC = () => {
               </div>
 
               <div className="p-8 flex gap-3 sticky bottom-0 bg-[#121212]">
-                <button onClick={() => copyToClipboard(fixedCode)} className="flex-1 flex justify-center gap-2 items-center py-3 border border-[#FF5F00] hover:bg-white/5 rounded-xl"><Copy className="w-4 h-4" /> COPY FIXED CODE</button>
-                <button onClick={() => downloadCode(fixedCode, `fixed-${Date.now()}.js`)} className="flex-1 flex justify-center gap-2 items-center py-3 bg-[#FF5F00] text-black font-bold rounded-xl"><Download className="w-4 h-4" /> DOWNLOAD</button>
+                <button onClick={() => copyToClipboard(fixedCode)} className="flex-1 flex justify-center gap-2 items-center py-3 border border-[#FF5F00] hover:bg-white/5 rounded-xl"><Copy classNa[...]
+                <button onClick={() => downloadCode(fixedCode, `fixed-${Date.now()}.js`)} className="flex-1 flex justify-center gap-2 items-center py-3 bg-[#FF5F00] text-black font-bold rounded-x[...]
               </div>
             </motion.div>
           </div>
