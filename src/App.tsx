@@ -74,7 +74,7 @@ const App: React.FC = () => {
 
   // Auto-detect language
   const detectLanguage = (codeStr: string): string => {
-    if (codeStr.includes('def ') || codeStr.includes('import ') && codeStr.includes(':')) return 'python';
+    if ((codeStr.includes('def ') || codeStr.includes('import ')) && codeStr.includes(':')) return 'python';
     if (codeStr.includes('function ') || codeStr.includes('const ') || codeStr.includes('=>')) return 'javascript';
     if (codeStr.includes('#include') || codeStr.includes('int main')) return 'cpp';
     if (codeStr.includes('<html') || codeStr.includes('</div>')) return 'html';
