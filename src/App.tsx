@@ -212,7 +212,7 @@ const App: React.FC = () => {
     if (!fixedCode) return;
 
     // Pulse animation trigger
-    const btn = document.getElementById('fix-all-btn');
+    const btn = fixAllBtnRef.current;
     if (btn) {
       btn.classList.add('animate-pulse');
       setTimeout(() => btn.classList.remove('animate-pulse'), 800);
