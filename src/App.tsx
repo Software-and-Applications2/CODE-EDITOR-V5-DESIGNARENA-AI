@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Play, History, Settings, User, Copy, Download, X, AlertTriangle, 
@@ -55,7 +55,7 @@ const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [username, setUsername] = useState<string>('dev_user');
   const [sessions, setSessions] = useState<Session[]>([]);
-  const [selectedSession, setSelectedSession] = useState<Session | null>(null);
+  const [selectedSession, setSelectedSession] = useState<Session | null>(null);   const fixAllBtnRef = useRef<HTMLButtonElement>(null);
   const [scanProgress, setScanProgress] = useState<number>(0);
 
   // Load sessions from localStorage
@@ -391,7 +391,7 @@ const App: React.FC = () => {
 
                   {fixedCode && (
                     <motion.button 
-                      id="fix-all-btn"
+                      ref={fixAllBtnRef}
                       whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.985 }}
                       onClick={applyAllFixes}
                       className="flex items-center gap-3 px-9 py-3.5 rounded-xl bg-[#FF5F00] hover:bg-[#FF5F00]/90 text-black font-extrabold shadow-[0_0_25px_rgba(255,95,0,0.5)] active:scale-[0.985] transition-all"
