@@ -182,7 +182,7 @@ const App: React.FC = () => {
         description: 'Potential logic improvement detected',
         explanation: 'Consider adding input validation for edge cases.',
         original: 'for (let i = 0; i < arr.length; i++)',
-        fixed: 'for (let i = 0; i < arr.length; i++) { if (arr[i] != null)'
+        fixed: 'for (let i = 0; i < arr.length; i++) { if (arr[i] !== null)'
       });
     }
 
