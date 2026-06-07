@@ -55,7 +55,8 @@ const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [username, setUsername] = useState<string>('dev_user');
   const [sessions, setSessions] = useState<Session[]>([]);
-  const [selectedSession, setSelectedSession] = useState<Session | null>(null);   const fixAllBtnRef = useRef<HTMLButtonElement>(null);
+  const [selectedSession, setSelectedSession] = useState<Session | null>(null);
+  const fixAllBtnRef = useRef<HTMLButtonElement>(null);
   const [scanProgress, setScanProgress] = useState<number>(0);
 
   // Load sessions from localStorage
