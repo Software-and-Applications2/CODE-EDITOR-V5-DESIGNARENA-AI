@@ -307,7 +307,7 @@ const App: React.FC = () => {
         <div className="flex items-center gap-4">
           {!isLoggedIn ? (
             <button onClick={() => setShowLoginModal(true)} className="flex items-center gap-2 px-5 py-1.5 rounded bg-[#FF5F00] hover:bg-[#FF5F00]/90 text-black font-semibold transition-all activ[...]
-              <User className="w-4 h-4" /> LOGIN TO SAVE
+                          <User className="w-4 h-4" /> LOGIN TO SAVE
             </button>
           ) : (
             <div className="flex items-center gap-2 text-sm px-4 py-1 rounded border border-[#FF5F00]/40 text-[#FF5F00]">
