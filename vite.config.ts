@@ -6,9 +6,13 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig(async () => {
   const plugins = [react(), tailwindcss()];
   try {
-    // @ts-ignore
+    // @ts-ignore — optional dev-only source-tagging plugin
     const m = await import('./.vite-source-tags.js');
     plugins.push(m.sourceTags());
-  } catch {}
+    console.info('[vite] vite-source-tags plugin loaded.');
+  } catch (err) {
+    // Plugin is optional; safe to continue without it
+    console.warn('[vite] vite-source-tags plugin not found, skipping:', (err as Error).message);
+  }
   return { plugins };
 })
