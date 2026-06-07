@@ -144,7 +144,17 @@ const App: React.FC = () => {
         currentFixed = currentFixed.replace(/ == /g, ' === ');
       }
       // Rule 3: Add const/let optimization suggestion
-      if (code.includes('let ') && !code.includes('const ')) {
+      const letDeclarations = [...currentFixed.matchAll(/\blet\s+([A-Za-z_$][\w$]*)\b/g)];
+      const hasNonReassignedLet = letDeclarations.some((match) => {
+        const varName = match[1];
+        const reassignmentRegex = new RegExp(
+          `\\b${varName}\\b\\s*(=|\\+=|-=|\\*=|/=|%=)|(?:\\+\\+|--)\\s*\\b${varName}\\b|\\b${varName}\\b\\s*(?:\\+\\+|--)`,
+          'm'
+        );
+        return !reassignmentRegex.test(currentFixed);
+      });
+
+      if (hasNonReassignedLet) {
         detectedIssues.push({
           id: 3,
           type: 'Performance',
